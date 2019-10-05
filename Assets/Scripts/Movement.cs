@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
 
         _rigidbody.velocity = velocity;
         
-        _animator.SetFloat("Velocity", velocity.magnitude);
+        _animator.SetFloat("Velocity", _rigidbody.velocity.magnitude);
 
         if (direction != Vector3.zero)
         {
