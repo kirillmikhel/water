@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     private Quaternion _cameraRotation;
     private Animator _animator;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +30,10 @@ public class Movement : MonoBehaviour
 
         var velocity = direction * speed * Time.deltaTime;
 
-        _rigidbody.velocity = velocity;
-        
+
+        _rigidbody.velocity = new Vector3(velocity.x, _rigidbody.velocity.y, velocity.z);
+
+
         _animator.SetFloat("Velocity", _rigidbody.velocity.magnitude);
 
         if (direction != Vector3.zero)
