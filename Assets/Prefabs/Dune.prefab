@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 6931254196301923927}
   - component: {fileID: 6931254196301923924}
   - component: {fileID: 3663760733814504547}
+  - component: {fileID: 6901230095950112177}
   m_Layer: 0
   m_Name: DuneMesh
   m_TagString: Untagged
@@ -123,3 +124,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 3ce36b2a315954a389bbe749d2932371, type: 2}
+--- !u!114 &6901230095950112177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931254196301923925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c6d1741509e46adb3ae9025af3d3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
