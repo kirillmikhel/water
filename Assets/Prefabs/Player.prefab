@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 620008883}
   - component: {fileID: 8671338182047637609}
   - component: {fileID: 620008885}
+  - component: {fileID: 1335751370}
+  - component: {fileID: 1335751363}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -53,7 +55,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -125,7 +127,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2829105126008331360}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71fcd6a40fbef45ab93943609a3431f0, type: 3}
   m_Name: 
@@ -144,6 +146,32 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.5
   m_Center: {x: 0, y: 1, z: 1}
+--- !u!114 &1335751370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2829105126008331360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb46d838d0424be2a1ca380a0be2966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 10
+--- !u!114 &1335751363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2829105126008331360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec60d1aed5618431583a582a6ae29908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: 00000000
 --- !u!1001 &2829105124148743624
 PrefabInstance:
   m_ObjectHideFlags: 0
