@@ -35,7 +35,7 @@ public class Digger : MonoBehaviour
     }
 
     private IEnumerator StartDigging()
-    {
+    {        
         _isDigging = true;
         
         _sphereCollider.enabled = true;

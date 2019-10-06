@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2619751621780072802}
   - component: {fileID: 95794830630388156}
+  - component: {fileID: 1823979390}
+  - component: {fileID: 1823979389}
+  - component: {fileID: 1823979388}
   m_Layer: 0
   m_Name: Monk
   m_TagString: Untagged
@@ -52,6 +55,52 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &1823979390
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619751621780072801}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!136 &1823979389
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619751621780072801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.80060196
+  m_Height: 3.4015574
+  m_Direction: 1
+  m_Center: {x: -0.03558159, y: 1.6779206, z: -0.022540092}
+--- !u!114 &1823979388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619751621780072801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cd84a3fb48f49458b40422c11f2846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  route: {fileID: 0}
+  speed: 200
+  rotationSpeed: 10
+  loop: 1
 --- !u!1001 &2619751620909642053
 PrefabInstance:
   m_ObjectHideFlags: 0
