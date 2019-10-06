@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 2829105126008331374}
   - component: {fileID: 2829105126008331372}
   - component: {fileID: 32796379}
+  - component: {fileID: 620008883}
+  - component: {fileID: 8671338182047637609}
+  - component: {fileID: 620008885}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -66,10 +69,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.6696103
+  m_Height: 2.824621
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.061183155, y: 1.3987199, z: 0}
 --- !u!114 &2829105126008331372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fb7fe8130a54ab79b1f8a01ea1cec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
+  speed: 275
   rotationSpeed: 10
 --- !u!95 &32796379
 Animator:
@@ -103,6 +106,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &620008883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2829105126008331360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a32f76e685464fe28ba02ea6cb83960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8671338182047637609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2829105126008331360}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fcd6a40fbef45ab93943609a3431f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0.7
+--- !u!135 &620008885
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2829105126008331360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 1, z: 1}
 --- !u!1001 &2829105124148743624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,6 +396,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47cfcac23e61d4e458e850bc2fa05ef3, type: 3}
 --- !u!4 &2829105124529919815 stripped
