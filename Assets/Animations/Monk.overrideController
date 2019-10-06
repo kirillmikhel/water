@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Monk
+  m_Controller: {fileID: 9100000, guid: 9e997e218f8c74195b8a792715d6190a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 03de6663aea4442b699af91e04176ca3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ed5e0fc11720c4f2392fc90cf1eb13ef, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fe2104785835f41d5bca3bfb1a0223c0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a8a0cc9456d3a4f87b5ed59e06068e5f, type: 2}
