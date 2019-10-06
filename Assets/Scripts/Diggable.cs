@@ -10,6 +10,8 @@ public class Diggable : MonoBehaviour
 
         if (!other.gameObject.GetComponent<Digger>().IsDigging()) return;
 
+        GameManager.Instance.GetComponent<SoundController>().diggingSource.Play();
+
         Destroy(gameObject);
     }
 }
