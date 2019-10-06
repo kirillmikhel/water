@@ -26,7 +26,7 @@ public class DuneGenerator : MonoBehaviour
             {
                 for (int y = 0; y < height; y++)
                 {
-                    var temp = 2000 * F(x, z, width / 2, depth / 2, 10);
+                    var temp = 2000 * F(x, z, width / 2, depth / 2, 5);
                     Debug.Log(temp);
                     Debug.Log(y);
                     
