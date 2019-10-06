@@ -11,11 +11,13 @@ public class Movement : MonoBehaviour
     private Quaternion _cameraRotation;
     private Animator _animator;
     private AudioSource _audioSource;
+    private Vision _vision;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        _vision = GetComponent<Vision>();
         _audioSource = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody>();
@@ -29,6 +31,11 @@ public class Movement : MonoBehaviour
         var direction = _cameraRotation *
                         new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
+
+        if (_vision.isOn)
+        {
+            direction = Vector3.zero;
+        }
 
         var velocity = direction * speed * Time.deltaTime;
 

@@ -6,8 +6,8 @@ using UnityEngine;
 public class FollowingThePath : MonoBehaviour
 {
     public GameObject route;
-    public float speed = 5.0f;
-    public float rotationSpeed = 1.0f;
+    public float speed = 200.0f;
+    public float rotationSpeed = 10.0f;
     public bool loop = false;
 
     private List<Vector3> _travelPath;

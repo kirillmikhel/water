@@ -4,35 +4,51 @@ using UnityEngine;
 
 public class Vision : MonoBehaviour
 {
+    public bool isOn = false;
+    
     private GameObject _city;
     private VisionToggleable[] _visionToggleables;
 
-    private bool _previousVisionFlag = false;
+    private bool _previousIsOn = false;
+    private GameObject _sun;
+    private Animator _lightAnimator;
+    private SoundController _soundController;
 
     // Start is called before the first frame update
     void Start()
     {
+        _soundController = GameManager.Instance.GetComponent<SoundController>();
         _city = GameObject.FindGameObjectWithTag("City");
         _visionToggleables = _city.GetComponentsInChildren<VisionToggleable>();
+        
+        _sun = GameObject.FindGameObjectWithTag("Sun");
+        _lightAnimator = _sun.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        var isVisionOn = Input.GetAxisRaw("Vision") == 1;
+        isOn = Input.GetAxisRaw("Vision") == 1;
         
-        var isVisionFlagChanged = isVisionOn != _previousVisionFlag;
+        var isVisionFlagChanged = isOn != _previousIsOn;
 
         if (!isVisionFlagChanged) return;
 
-        _previousVisionFlag = isVisionOn;
+        _previousIsOn = isOn;
         
         foreach (var visionToggleable in _visionToggleables)
         {
-            if (isVisionOn)
+            _lightAnimator.SetBool("Vision", isOn);
+            _soundController.SwitchBackgroundMusic(isOn);
+            
+            if (isOn)
+            {
                 visionToggleable.SwitchToPast();
+            }
             else
+            {
                 visionToggleable.SwitchToPresent();
+            }
         }
     }
 }
