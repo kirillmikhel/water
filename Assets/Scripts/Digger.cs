@@ -9,10 +9,12 @@ public class Digger : MonoBehaviour
     private float _currentCooldown;
     private bool _isDigging = false;
     private SphereCollider _sphereCollider;
+    private Inventory _inventory;
 
     // Start is called before the first frame update
     void Start()
     {
+        _inventory = GetComponent<Inventory>();
         _sphereCollider = GetComponent<SphereCollider>();
     }
 
@@ -21,10 +23,15 @@ public class Digger : MonoBehaviour
     {
         Cooldown();
         
-        if (Input.GetAxisRaw("Dig") == 1 && _currentCooldown <= 0)
+        if (CanDig() && Input.GetAxisRaw("Dig") == 1 && _currentCooldown <= 0)
         {
             StartCoroutine(StartDigging());
         }
+    }
+
+    private bool CanDig()
+    {
+        return _inventory.Contains(ItemType.Shovel);
     }
 
     private IEnumerator StartDigging()

@@ -10,11 +10,13 @@ public class Movement : MonoBehaviour
     private Rigidbody _rigidbody;
     private Quaternion _cameraRotation;
     private Animator _animator;
+    private AudioSource _audioSource;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody>();
 
@@ -35,6 +37,8 @@ public class Movement : MonoBehaviour
 
 
         _animator.SetFloat("Velocity", _rigidbody.velocity.magnitude);
+
+        _audioSource.enabled = direction != Vector3.zero;
 
         if (direction != Vector3.zero)
         {
