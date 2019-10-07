@@ -9,11 +9,15 @@ public class SoundController : MonoBehaviour
     public AudioClip discoveryClip;
     public AudioClip diggingClip;
     public AudioClip wellCoverMovingClip;
+    public AudioClip pyramidDoorClip;
+    public AudioClip outroClip;
 
     public AudioSource backgroundMusicSource;
     public AudioSource discoverySource;
     public AudioSource diggingSource;
     public AudioSource wellCoverMovingSource;
+    public AudioSource pyramidDoorSource;
+    public AudioSource outroSource;
 
     public void Awake()
     {
@@ -21,6 +25,8 @@ public class SoundController : MonoBehaviour
         discoverySource = AddAudioSource(discoveryClip, false, true, 0.5f);
         diggingSource = AddAudioSource(diggingClip, false, false, 0.3f);
         wellCoverMovingSource = AddAudioSource(wellCoverMovingClip, false, false, 1f);
+        pyramidDoorSource = AddAudioSource(pyramidDoorClip, false, false, 0.5f);
+        outroSource = AddAudioSource(outroClip, false, false, 0.5f);
     }
 
     public void Start()

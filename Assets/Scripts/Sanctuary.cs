@@ -25,6 +25,8 @@ public class Sanctuary : MonoBehaviour
     IEnumerator Activate()
     {
         activated = true;
+        
+        GameManager.Instance.GetComponent<SoundController>().discoverySource.Play();
 
         activatedSanctuary.SetActive(true);
         pyramid.SetActive(true);

@@ -27,16 +27,19 @@ public class Pyramid : MonoBehaviour
 
         oasis.SetActive(true);
         openedPyramid.SetActive(true);
+        gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+        gameObject.GetComponentInChildren<MeshCollider>().enabled = false;
 
+        GameManager.Instance.GetComponent<SoundController>().pyramidDoorSource.Play();
+        
         hintObject.GetComponentInChildren<Text>().text =
-            "The door is open!\n I see something...";
+            "The door is open!\n";
 
         _inventory.RemoveItem(ItemType.Artifact);
 
         yield return new WaitForSeconds(5f);
 
         hintObject.SetActive(false);
-        gameObject.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)
