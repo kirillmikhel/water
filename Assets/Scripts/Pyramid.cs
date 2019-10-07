@@ -8,6 +8,8 @@ public class Pyramid : MonoBehaviour
     public bool used = false;
 
     public GameObject hintObject;
+    public GameObject oasis;
+    public GameObject openedPyramid;
 
     private void Start()
     {
@@ -23,6 +25,9 @@ public class Pyramid : MonoBehaviour
     {
         used = true;
 
+        oasis.SetActive(true);
+        openedPyramid.SetActive(true);
+
         hintObject.GetComponentInChildren<Text>().text =
             "The door is open!\n I see something...";
 
@@ -31,6 +36,7 @@ public class Pyramid : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         hintObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)
