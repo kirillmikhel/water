@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     public float speed = 5.0f;
     public float rotationSpeed = 1.0f;
+    public GameObject title;
 
     private Rigidbody _rigidbody;
     private Quaternion _cameraRotation;
@@ -49,6 +50,8 @@ public class Movement : MonoBehaviour
 
         if (direction != Vector3.zero)
         {
+            title.SetActive(false);
+            
             var targetRotation = Quaternion.LookRotation(direction);
 
             // Smoothly rotate towards the target point.
