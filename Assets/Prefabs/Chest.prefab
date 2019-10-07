@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
+  item: 5
   hintObject: {fileID: 0}
 --- !u!114 &333642767
 MonoBehaviour:

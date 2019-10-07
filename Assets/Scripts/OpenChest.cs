@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenChest : MonoBehaviour
 {
     public bool opened = false;
+    public ItemType item;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class OpenChest : MonoBehaviour
 
     public void Open()
     {
-        _inventory.AddItem(ItemType.Artifact);
+        _inventory.AddItem(item);
 
         opened = true;
         
