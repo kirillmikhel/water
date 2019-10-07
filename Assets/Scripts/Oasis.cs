@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class Oasis : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject credits;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private bool isTriggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Player")) return;
+        if (!other.gameObject.CompareTag("Player") || isTriggered) return;
+
+        isTriggered = true;
         
         GameManager.Instance.GetComponent<SoundController>().outroSource.Play();
+        
+        credits.SetActive(true);
     }
 }
