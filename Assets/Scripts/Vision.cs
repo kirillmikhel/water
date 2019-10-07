@@ -13,10 +13,12 @@ public class Vision : MonoBehaviour
     private GameObject _sun;
     private Animator _lightAnimator;
     private SoundController _soundController;
+    private Inventory _inventory;
 
     // Start is called before the first frame update
     void Start()
     {
+        _inventory = GetComponent<Inventory>();
         _soundController = GameManager.Instance.GetComponent<SoundController>();
         _city = GameObject.FindGameObjectWithTag("City");
         _visionToggleables = _city.GetComponentsInChildren<VisionToggleable>();
@@ -28,6 +30,8 @@ public class Vision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!_inventory.Contains(ItemType.Artifact)) return;
+            
         isOn = Input.GetAxisRaw("Vision") == 1;
         
         var isVisionFlagChanged = isOn != _previousIsOn;

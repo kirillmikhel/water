@@ -5,7 +5,6 @@ using UnityEngine;
 public enum ItemType
 {
     Shovel,
-    Vision,
     Rope,
     Bucket,
     Stone,
