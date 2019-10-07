@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782c847eeb0704f9199505a3e73a7907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToDrop: {fileID: 7818187121771262978, guid: bd8a0bbbcf1544de48fd12684468980f,
+  itemToDrop: {fileID: 5398370816230840195, guid: 1297902500df6499795ead2351554f29,
     type: 3}
 --- !u!1001 &1187633085517256593
 PrefabInstance:

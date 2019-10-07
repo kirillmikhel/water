@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenChest : MonoBehaviour
+public class PickUpShovel : MonoBehaviour
 {
-    public bool opened = false;
-
+    // Start is called before the first frame update
     private void Start()
     {
         _gameObject = GameObject.FindGameObjectWithTag("Player");
@@ -18,12 +17,10 @@ public class OpenChest : MonoBehaviour
     private Inventory _inventory;
     private Drop _drop;
 
-    public void Open()
+    public void PickUp()
     {
-        _inventory.AddItem(ItemType.Artifact);
+        _inventory.AddItem(ItemType.Shovel);
 
-        opened = true;
-        
         _drop.DoDrop();
 
         gameObject.SetActive(false);
@@ -33,19 +30,19 @@ public class OpenChest : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
-        if (!other.gameObject.CompareTag("Player") || opened) return;
+        if (!other.gameObject.CompareTag("Player")) return;
 
         hintObject.SetActive(true);
 
         if (Input.GetAxisRaw("Use") == 1)
         {
-            Open();
+            PickUp();
         }
     }
 
     private void OnCollisionExit(Collision other)
     {
-        if (!other.gameObject.CompareTag("Player") || opened) return;
+        if (!other.gameObject.CompareTag("Player")) return;
 
         hintObject.SetActive(false);
     }
