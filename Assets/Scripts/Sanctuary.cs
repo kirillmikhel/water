@@ -9,6 +9,9 @@ public class Sanctuary : MonoBehaviour
 
     public GameObject hintObject;
     public GameObject hintFailObject;
+    public GameObject activatedSanctuary;
+    public GameObject pyramid;
+    public GameObject oasis;
 
     private void Start()
     {
@@ -17,14 +20,18 @@ public class Sanctuary : MonoBehaviour
     }
 
     private GameObject _gameObject;
-    private Inventory _inventory;
+    private Inventory _inventory;    
 
     IEnumerator Activate()
     {
         activated = true;
 
+        activatedSanctuary.SetActive(true);
+        pyramid.SetActive(true);
+        oasis.SetActive(true);
+
         hintObject.GetComponentInChildren<Text>().text =
-            "I hear something from the North...";
+            "I hear something on the North...";
 
         _inventory.RemoveItem(ItemType.Mineral);
         _inventory.RemoveItem(ItemType.Stone);
