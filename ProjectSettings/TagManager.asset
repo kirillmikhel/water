@@ -6,6 +6,7 @@ TagManager:
   tags:
   - City
   - Sun
+  - Well
   layers:
   - Default
   - TransparentFX
