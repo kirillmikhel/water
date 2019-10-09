@@ -14,10 +14,15 @@ public class Vision : MonoBehaviour
     private Animator _lightAnimator;
     private SoundController _soundController;
     private Inventory _inventory;
+    private Rigidbody _rigidbody;
+    private CapsuleCollider _capsuleCollider;
 
     // Start is called before the first frame update
     void Start()
     {
+        _capsuleCollider = GetComponent<CapsuleCollider>();
+        _rigidbody = GetComponent<Rigidbody>();
+        
         _inventory = GetComponent<Inventory>();
         _soundController = GameManager.Instance.GetComponent<SoundController>();
         _city = GameObject.FindGameObjectWithTag("City");
@@ -48,10 +53,14 @@ public class Vision : MonoBehaviour
             if (isOn)
             {
                 visionToggleable.SwitchToPast();
+                _rigidbody.useGravity = false;
+                _capsuleCollider.enabled = false;
             }
             else
             {
                 visionToggleable.SwitchToPresent();
+                _rigidbody.useGravity = true;
+                _capsuleCollider.enabled = true;
             }
         }
     }

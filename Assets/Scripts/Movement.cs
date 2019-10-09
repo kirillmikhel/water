@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float rotationSpeed = 1.0f;
+    public float speed = 275.0f;
+    public float rotationSpeed = 10.0f;
     public GameObject title;
 
     private Rigidbody _rigidbody;
